@@ -1,16 +1,10 @@
-name: PHP Composer
-
-on:
-  push:
-    branches:
-      - main
-  pull_request: ~
-
+name: CI
+on: [pull_request]
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
-    name: CI
     steps:
+      - name: Prendre seulement le dernier commit
+        uses: actions/checkout@v2
       - name: Composer Install
         run: composer install
-
