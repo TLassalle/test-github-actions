@@ -14,3 +14,5 @@ jobs:
         run: composer install
       - name: Check coding standard
         run: vendor/bin/php-cs-fixer fix src --dry-run
+      - name: Static code analysis
+        run: vendor/bin/phpstan analyze src --level=max
