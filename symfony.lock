@@ -35,6 +35,9 @@
     "php-cs-fixer/diff": {
         "version": "v2.0.2"
     },
+    "phpstan/phpstan": {
+        "version": "1.5.4"
+    },
     "psr/cache": {
         "version": "3.0.0"
     },
