@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
@@ -10,7 +9,6 @@ class HelloWorldController
 {
     /**
      * @Route("/hello_world")
-     * @return Response
      */
     public function __invoke(): Response
     {
