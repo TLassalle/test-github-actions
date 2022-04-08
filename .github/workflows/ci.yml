@@ -16,3 +16,5 @@ jobs:
         run: vendor/bin/php-cs-fixer fix src --dry-run
       - name: Static code analysis
         run: vendor/bin/phpstan analyze src --level=max
+      - name: Unit test
+        run: bin/phpunit --testsuite unit
