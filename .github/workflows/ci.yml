@@ -18,3 +18,5 @@ jobs:
         run: vendor/bin/phpstan analyze src --level=max
       - name: Unit test
         run: bin/phpunit --testsuite unit
+      - name: Integration test
+        run: bin/phpunit --testsuite integration
