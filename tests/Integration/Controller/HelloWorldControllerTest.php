@@ -15,6 +15,7 @@ class HelloWorldControllerTest extends WebTestCase
         $response = $client->request(Request::METHOD_GET, '/hello_world');
 
         self::assertResponseStatusCodeSame(Response::HTTP_OK);
-        $this->assertEquals($response->getNode(0)->textContent, 'Hello world');
+
+        $this->assertEquals('Hello world', $response->getNode(0)?->textContent);
     }
 }
