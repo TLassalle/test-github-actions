@@ -20,3 +20,5 @@ jobs:
         run: bin/phpunit --testsuite unit
       - name: Integration test
         run: bin/phpunit --testsuite integration
+      - name: Test coverage
+        run: XDEBUG_MODE=coverage bin/phpunit --coverage-clover=coverage.xml && php display-coverage.php
