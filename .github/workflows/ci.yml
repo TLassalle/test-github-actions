@@ -20,5 +20,5 @@ jobs:
         run: bin/phpunit --testsuite unit
       - name: Integration test
         run: bin/phpunit --testsuite integration
-      - name: Test coverage
+      - name: Test coverage # This probably will be reworked to be more user-friendly, as we just display a percentage
         run: XDEBUG_MODE=coverage bin/phpunit --coverage-clover=coverage.xml && php display-coverage.php
