@@ -15,7 +15,7 @@ jobs:
       - name: Check coding standard
         run: vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --dry-run
       - name: Static code analysis
-        run: vendor/bin/phpstan analyze src --level=max
+        run: vendor/bin/phpstan analyze src tests --level=max
       - name: Unit test
         run: bin/phpunit --testsuite unit
       - name: Integration test
